@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="1008611">
+    <button>发送验证码</button>
+
+    <script src="../lib/jquery-1.12.4.js"></script>
+    
+    <script>
+        $('button').click(function() {
+            var num = 3;
+            var that = this;
+            $(this).prop('disabled',true);
+            var flag = setInterval(function(){
+                num--;
+                $(that).text(num+'秒后重新发送');
+                if(num == 0) {
+                    clearInterval(flag);
+                    $(that).text('重新发送');
+                    $(that).prop('disabled',false);
+                }
+            },1000);
+        });
+    </script>
+</body>
+</html>

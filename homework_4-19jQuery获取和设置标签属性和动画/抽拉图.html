@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抽拉图测验</title>
+    <style>
+        .box {
+            width: 100%;
+            /* position: relative; */
+        }
+
+        .content {
+            float: right;
+            width: 0px;
+            height: 600px;
+            background-color: #ff0000;
+            /* display: none; */
+        }
+
+        .slide {
+            float: right;
+            width: 40px;
+            height: 40px;
+            margin-top: 250px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+        </div>
+        <div class="slide"></div>
+    </div>
+
+    <script src="lib/jquery-1.12.4.js"></script>
+    <script>
+        // var width = $('.content').attr('width');
+        // alert(parseInt(width));
+        // $('.slide').mouseleave(function () {
+        //      $('.content').stop().animate({ width: 0 }, 500);
+        // });
+        // $('.box').mouseenter(function () {
+        //      $('.content').stop().animate({ width: 200 }, 500);
+        // })
+        var flag = true;
+        $('.slide').click(function () {
+            if(flag) {
+                flag = false;
+                $('.content').stop().animate({ width: 200 }, 500);
+            }else {
+                flag = true;
+                $('.content').stop().animate({ width: 0 }, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>

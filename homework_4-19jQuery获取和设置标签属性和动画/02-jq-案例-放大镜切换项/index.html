@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!--版心  -->
+  <div class="w">
+    <!-- 左侧 -->
+    <div class="leftBox">
+      <!-- 上 -->
+      <div class="top">
+        <img src="img/m1.jpg">
+      </div>
+      <ul>
+        <li class="active">
+          <img src="img/s1.jpg" msrc="m1.jpg" bsrc="b1.jpg">
+        </li>
+        <li>
+          <img src="img/s2.jpg" msrc="m2.jpg" bsrc="b2.jpg">
+        </li>
+        <li>
+          <img src="img/s3.jpg" msrc="m3.jpg" bsrc="b3.jpg">
+        </li>
+      </ul>
+    </div>
+    <!-- 右侧 -->
+    <div class="rightBox">
+      <img src="img/b1.jpg" alt="">
+    </div>
+  </div>
+  <script src="./lib/jquery-1.12.4.js"></script>
+  <!-- <script>
+    var path = 'img/';
+    $('li').mouseover(function() {
+      $(this).addClass('active').siblings().removeClass('active');
+      // 找到当前li，取出其中的msrc和其中的bsrc
+      var msrc = $(this).find('img').attr('msrc');
+      var bsrc = $(this).find('img').attr('bsrc');
+      $('.top img').attr('src', path+msrc);
+      $('.rightBox img').attr('src', path+bsrc);
+    });
+  </script> -->
+  <!-- <script>
+    var path = 'img/';
+    $('li').mouseenter(function() {
+      $(this).addClass('active').siblings().removeClass('active');
+      var msrc = $(this).find('img').attr('msrc');
+      var bsrc = $(this).find('img').attr('bsrc');
+      $('.top img').attr('src',path+msrc);
+      $('.rightBox img').attr('src', path+bsrc);
+    });
+  </script> -->
+
+  
+</body>
+
+</html>
